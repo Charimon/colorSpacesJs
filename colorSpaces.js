@@ -6,7 +6,7 @@ function xyzToLab(colorSpace, referenceWhiteSpace) {
     var e_const = 216/24389; 
     var k_const = 24389/27;
     if(value > e_const) return Math.pow(value, 1/3);
-    else return k_const * value + 16)/116;
+    else return (k_const * value + 16)/116;
   }
   
   var fx = f_convert(colorSpace[0]/referenceWhiteSpace[0]);
